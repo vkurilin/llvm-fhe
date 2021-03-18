@@ -1,13 +1,3 @@
-//==============================================================================
-// FILE:
-//    ConvertFCmpEq.h
-//
-// DESCRIPTION:
-//    Declares the ConvertFCmpEq pass for the new and the legacy pass managers.
-//
-// License: MIT
-//==============================================================================
-
 #ifndef LLVM_TUTOR_CONVERT_FCMP_EQ_H
 #define LLVM_TUTOR_CONVERT_FCMP_EQ_H
 
