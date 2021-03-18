@@ -1,29 +1,18 @@
 //=============================================================================
 // FILE:
-//    ConvertFCmpEq.cpp
+//    HElibCallsGenerator.cpp
 //
 // DESCRIPTION:
-//    Transformation pass which uses the results of the FindFCmpEq analysis pass
-//    to convert all equality-based floating point comparison instructions in a
-//    function to indirect, difference-based comparisons.
+//    Produses calls for HElib library.
 //
-//    This example demonstrates how to couple an analysis pass with a
-//    transformation pass, the use of statistics (the STATISTIC macro), and LLVM
-//    debugging operations (the LLVM_DEBUG macro and the llvm::dbgs() output
-//    stream). It also demonstrates how instructions can be modified without
-//    having to completely replace them.
-//
-//    Originally developed for [1].
-//
-//    [1] "Writing an LLVM Optimization" by Jonathan Smith
 //
 // USAGE:
 //    1. Legacy PM
-//      opt --load libConvertFCmpEq.dylib --convert-fcmp-eq `\`
+//      opt --load libGenerateHElibCalls.dylib --analyze --generate-helib-calls `\`
 //        --disable-output <input-llvm-file>
 //    2. Manual pass pipeline - new PM
-//      opt --load-pass-plugin libConvertFCmpEq.dylib [--stats] `\`
-//        --passes='convert-fcmp-eq' --disable-output <input-llvm-file>
+//      opt --load-pass-plugin libGenerateHElibCalls.dylib `\`
+//        --passes='print<generate-helib-calls>' --disable-output <input-llvm-file>
 //
 // License: MIT
 //=============================================================================
